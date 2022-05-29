@@ -118,13 +118,29 @@
         "name": "zombie.png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "file": "assets/background.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "background.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
   },
   "objects": [],
   "objectsGroups": [],
-  "variables": [],
+  "variables": [
+    {
+      "folded": true,
+      "name": "MusicStarted",
+      "type": "boolean",
+      "value": false
+    }
+  ],
   "layouts": [
     {
       "b": 28,
@@ -136,7 +152,7 @@
       "oglZNear": 1,
       "r": 77,
       "standardSortMethod": true,
-      "stopSoundsOnStartup": true,
+      "stopSoundsOnStartup": false,
       "title": "Grouchy Toes",
       "v": 39,
       "uiSettings": {
@@ -592,6 +608,50 @@
             {
               "type": {
                 "inverted": false,
+                "value": "GlobalVariableAsBoolean"
+              },
+              "parameters": [
+                "MusicStarted",
+                "False"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "SetGlobalVariableAsBoolean"
+              },
+              "parameters": [
+                "MusicStarted",
+                "True"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "PlayMusic"
+              },
+              "parameters": [
+                "",
+                "background.mp3",
+                "yes",
+                "50",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
                 "value": "DepartScene"
               },
               "parameters": [
@@ -934,15 +994,6 @@
                       "subInstructions": []
                     }
                   ],
-                  "events": []
-                },
-                {
-                  "type": "BuiltinCommonInstructions::ForEachChildVariable",
-                  "iterableVariableName": "",
-                  "valueIteratorVariableName": "child",
-                  "keyIteratorVariableName": "",
-                  "conditions": [],
-                  "actions": [],
                   "events": []
                 }
               ]
@@ -1455,11 +1506,12 @@
             {
               "type": {
                 "inverted": false,
-                "value": "PushScene"
+                "value": "Scene"
               },
               "parameters": [
                 "",
-                "\"Main\""
+                "\"Main\"",
+                ""
               ],
               "subInstructions": []
             }
@@ -1510,11 +1562,12 @@
             {
               "type": {
                 "inverted": false,
-                "value": "PushScene"
+                "value": "Scene"
               },
               "parameters": [
                 "",
-                "\"Main\""
+                "\"Main\"",
+                ""
               ],
               "subInstructions": []
             }
