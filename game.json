@@ -336,7 +336,7 @@
           "name": "RestartText",
           "persistentUuid": "86554776-15be-47ad-bbba-8694d23745c5",
           "width": 0,
-          "x": 308,
+          "x": 309,
           "y": 426,
           "zOrder": 13,
           "numberProperties": [],
@@ -499,9 +499,9 @@
           "font": "",
           "characterSize": 35,
           "color": {
-            "b": 3,
-            "g": 3,
-            "r": 226
+            "b": 0,
+            "g": 0,
+            "r": 130
           }
         },
         {
@@ -519,9 +519,9 @@
           "font": "",
           "characterSize": 20,
           "color": {
-            "b": 3,
-            "g": 3,
-            "r": 226
+            "b": 0,
+            "g": 0,
+            "r": 130
           }
         },
         {
@@ -579,9 +579,9 @@
           "font": "",
           "characterSize": 20,
           "color": {
-            "b": 3,
-            "g": 3,
-            "r": 226
+            "b": 0,
+            "g": 0,
+            "r": 130
           }
         },
         {
@@ -637,7 +637,7 @@
               "parameters": [
                 "",
                 "background.mp3",
-                "yes",
+                "no",
                 "50",
                 ""
               ],
